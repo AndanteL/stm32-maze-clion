@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"pf\startup_stm32f103xe.o"
+"pf\main.o"
+"pf\gpio.o"
+"pf\tim.o"
+"pf\stm32f1xx_it.o"
+"pf\stm32f1xx_hal_msp.o"
+"pf\stm32f1xx_hal_gpio_ex.o"
+"pf\stm32f1xx_hal_tim.o"
+"pf\stm32f1xx_hal_tim_ex.o"
+"pf\stm32f1xx_hal.o"
+"pf\stm32f1xx_hal_rcc.o"
+"pf\stm32f1xx_hal_rcc_ex.o"
+"pf\stm32f1xx_hal_gpio.o"
+"pf\stm32f1xx_hal_dma.o"
+"pf\stm32f1xx_hal_cortex.o"
+"pf\stm32f1xx_hal_pwr.o"
+"pf\stm32f1xx_hal_flash.o"
+"pf\stm32f1xx_hal_flash_ex.o"
+"pf\stm32f1xx_hal_exti.o"
+"pf\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "pf\pf.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "pf.map" -o pf\pf.axf
